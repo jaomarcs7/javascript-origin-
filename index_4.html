@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypress Discovery</title>
+</head>
+<body>
+
+    <!-- Describe components of webpage  -->
+    <h1>CNH validation</h1>
+    <input type ="text" name="firstname" placeholder="what is your name?">
+    <input type ="number" name="yourage" placeholder="What is your age?">
+    <button type="button" onclick="verifyAge()">Verify Age</button> 
+    <!-- Add function Onclick on Element "Burtton" -->
+    
+    <script type="text/javascript">
+        function verifyAge() {
+            //console.log ('test')
+
+            // Assigning values to variables is achieved by the = operator.
+            var firstname = document.querySelector ('input[name=firstname]')
+            var yourage   = document.querySelector ('input[name=yourage]')
+
+            // receive the values
+            var numbage = parseInt (yourage.value)
+
+            if (numbage >= 18 ){
+                alert ('YES')
+            } else if (numbage < 18 ) { 
+                alert ('NOT')
+            }else {
+                alert ('Erro')
+            }
+        }
+
+    </script>
+</body>
+</html>
